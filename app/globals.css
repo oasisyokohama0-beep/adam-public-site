@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ── Reverence design tokens ── */
+@theme inline {
+  /* Fonts */
+  --font-serif: var(--font-cormorant), "Noto Serif JP", serif;
+  --font-jp:    "Noto Serif JP", serif;
+  --font-sans:  "Noto Sans JP", -apple-system, system-ui, sans-serif;
+  --font-mono:  ui-monospace, "SF Mono", monospace;
+
+  /* Reverence color palette */
+  --color-bg:         #F6F2EB;
+  --color-surface:    #FFFFFF;
+  --color-ink:        #2A2622;
+  --color-ink-sub:    #7A6F62;
+  --color-ink-mute:   #B6AB9C;
+  --color-gold:       #B8956A;
+  --color-gold-dk:    #8C6B43;
+  --color-cream:      #EDE5D6;
+  --color-line-green: #06C755;
+  --color-rule:       rgba(42,38,34,0.10);
+  --color-rule-gold:  rgba(184,149,106,0.45);
+
+  /* shadcn semantic → Reverence */
+  --color-background:          var(--color-bg);
+  --color-foreground:          var(--color-ink);
+  --color-card:                var(--color-surface);
+  --color-card-foreground:     var(--color-ink);
+  --color-popover:             var(--color-surface);
+  --color-popover-foreground:  var(--color-ink);
+  --color-primary:             var(--color-ink);
+  --color-primary-foreground:  #FFFFFF;
+  --color-secondary:           var(--color-cream);
+  --color-secondary-foreground:var(--color-ink);
+  --color-muted:               var(--color-cream);
+  --color-muted-foreground:    var(--color-ink-sub);
+  --color-accent:              var(--color-gold);
+  --color-accent-foreground:   #FFFFFF;
+  --color-destructive:         oklch(0.577 0.245 27.325);
+  --color-border:              rgba(184,149,106,0.45);
+  --color-input:               var(--color-cream);
+  --color-ring:                var(--color-gold);
+
+  /* Radius — sharp / hotel-like */
+  --radius:    0rem;
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+}
+
+/* ── Base styles ── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-bg text-ink font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}

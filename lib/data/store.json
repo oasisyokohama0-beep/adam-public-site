@@ -1,0 +1,12 @@
+{
+  "name": "[STORE_NAME]",
+  "nameRoman": "[STORE_NAME_ROMAN]",
+  "catchphrase": "[STORE_CATCHPHRASE]",
+  "area": "[STORE_AREA]",
+  "description": "[STORE_DESCRIPTION]",
+  "lineUrl": "[STORE_LINE_URL]",
+  "phone": "[STORE_PHONE]",
+  "businessHours": "[STORE_BUSINESS_HOURS]",
+  "closedDays": "[STORE_CLOSED_DAYS]",
+  "established": "[STORE_ESTABLISHED]"
+}

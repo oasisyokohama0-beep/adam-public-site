@@ -8,7 +8,7 @@ import type { Therapist } from '@/lib/types'
 
 export const metadata: Metadata = {
   title: '在籍セラピスト',
-  description: '[STORE_NAME]の在籍セラピスト一覧。初めての方にも安心のセラピストが揃っています。',
+  description: 'ADAM TOKYOの在籍セラピスト一覧。初めての方にも安心のセラピストが揃っています。',
 }
 
 // TODO(handover): ダミーデータを Supabase クエリに置換
@@ -30,12 +30,8 @@ export default function PlayersPage() {
       <main>
         {/* Page header */}
         <div className="px-6 pt-9 pb-6 text-center">
-          <span className="font-serif text-[11px] tracking-[4px] uppercase text-gold italic">Our Therapists</span>
-          <div className="font-jp text-[22px] mt-3 tracking-[4px]">在籍セラピスト</div>
+          <div className="font-jp text-[22px] tracking-[4px]">在籍セラピスト</div>
           <div className="mt-4"><BDivider /></div>
-          <div className="font-serif text-[11px] text-ink-sub mt-3.5 tracking-[1.5px] italic">
-            {therapists.length} therapists
-          </div>
         </div>
 
         {/* Filter tabs */}

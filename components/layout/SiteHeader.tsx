@@ -34,7 +34,8 @@ export function SiteHeader() {
 
         {/* Brand — 左 */}
         <Link href="/" className="text-center no-underline">
-          <div className="font-serif text-base tracking-[4px] text-ink uppercase">Lumière</div>
+          {/* LEGAL(handover): 店舗名 — store.json nameRoman から取得 */}
+          <div className="font-serif text-base tracking-[4px] text-ink uppercase">{store.nameRoman}</div>
           <div className="font-serif text-[8px] tracking-[2.5px] text-gold italic mt-px">est. 2024 ・ tokyo</div>
         </Link>
 
@@ -52,13 +53,13 @@ export function SiteHeader() {
           <SheetContent
             side="right"
             showCloseButton={false}
-            className="w-full max-w-[430px] p-0 bg-ink border-none flex flex-col gap-0"
+            className="w-full max-w-[430px] p-0 bg-surface border-none flex flex-col gap-0"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-[22px] py-3 border-b border-rule-gold flex-shrink-0">
               <div className="w-[22px]" />
               <div className="text-center">
-                <div className="font-serif text-sm tracking-[4px] text-cream uppercase">Menu</div>
+                <div className="font-serif text-sm tracking-[4px] text-ink uppercase">Menu</div>
               </div>
               <SheetClose className="w-[22px] h-4 relative bg-transparent border-none p-0 cursor-pointer">
                 <span className="absolute top-[7px] left-0 block w-[22px] h-px bg-cream rotate-45" />
@@ -71,14 +72,14 @@ export function SiteHeader() {
               {MENU_ITEMS.map(item => (
                 <SheetClose key={item.label} render={<Link href={item.href} />}>
                   <div className="py-[14px] px-6">
-                    <div className="font-jp text-base text-cream tracking-[3px]">{item.label}</div>
+                    <div className="font-jp text-base text-ink tracking-[3px]">{item.label}</div>
                   </div>
                 </SheetClose>
               ))}
             </nav>
 
             {/* Footer */}
-            <div className="flex-shrink-0 px-[22px] pb-6 pt-[18px] border-t border-rule-gold bg-ink text-center">
+            <div className="flex-shrink-0 px-[22px] pb-6 pt-[18px] border-t border-rule-gold bg-surface text-center">
               <div className="font-serif text-[10px] tracking-[3px] text-gold italic">RESERVATIONS</div>
               <div className="flex gap-2 justify-center mt-2.5">
                 {/* LEGAL(handover): LINE URL — store.json lineUrl から取得 */}

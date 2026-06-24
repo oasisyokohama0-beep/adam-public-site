@@ -97,7 +97,7 @@ export function ReviewForm({ playerOptions }: Props) {
           <div className="mt-6">
             <Link
               href="/reviews"
-              className="inline-block px-8 py-3 bg-ink text-white font-serif tracking-[2px] text-[11px] no-underline"
+              className="inline-block px-8 py-3 bg-gold text-bg font-serif tracking-[2px] text-[11px] no-underline"
             >
               VIEW REVIEWS
             </Link>
@@ -241,7 +241,7 @@ export function ReviewForm({ playerOptions }: Props) {
         <button
           type="submit"
           disabled={pending}
-          className="w-full py-3.5 bg-ink text-white font-serif tracking-[3px] text-[12px] disabled:opacity-50"
+          className="w-full py-3.5 bg-gold text-bg font-serif tracking-[3px] text-[12px] disabled:opacity-50"
         >
           {pending ? 'SUBMITTING…' : 'SUBMIT'}
         </button>

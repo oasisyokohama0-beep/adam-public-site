@@ -31,7 +31,7 @@ export function AgeGate() {
   if (!visible) return null
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-center justify-center p-6 bg-ink/92 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center p-6 bg-black/85 backdrop-blur-sm">
       <div className="relative bg-bg max-w-[340px] w-full px-7 py-10 text-center border border-rule-gold">
         {/* 内枠 */}
         <div className="absolute inset-2 border border-rule-gold pointer-events-none" />
@@ -54,7 +54,7 @@ export function AgeGate() {
         <div className="flex gap-2.5 mt-7">
           <button
             onClick={confirm}
-            className="flex-1 py-[14px] bg-ink text-white font-serif text-xs tracking-[2px] cursor-pointer"
+            className="flex-1 py-[14px] bg-gold text-bg font-serif text-xs tracking-[2px] cursor-pointer"
           >
             18歳以上です
           </button>

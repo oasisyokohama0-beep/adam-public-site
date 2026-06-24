@@ -18,16 +18,16 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    default: "[STORE_NAME]— 銀座・新宿・渋谷",
-    template: "%s | Lumière",
+    default: "ADAM TOKYO",
+    template: "%s | ADAM TOKYO",
   },
   description:
-    "はじめてのあなたへ、静かな夜を。女性用風俗・東京（銀座・新宿・渋谷）。完全予約制・丁寧なサポートで初めての方も安心です。",
+    "女性用風俗 ADAM TOKYO（東京・新宿）。超性感特化型 — 確かな技術力で特別なひとときを。完全予約制・丁寧なサポートで初めての方も安心です。",
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    title: "[STORE_NAME]— 銀座・新宿・渋谷",
-    description: "はじめてのあなたへ、静かな夜を。",
+    title: "ADAM TOKYO",
+    description: "女性用風俗 ADAM TOKYO（東京・新宿）。超性感特化型。",
   },
 };
 

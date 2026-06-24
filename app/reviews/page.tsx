@@ -52,7 +52,7 @@ export default function ReviewsPage() {
         <div className="px-[22px] pt-2 pb-6 text-center">
           <Link
             href="/reviews/new"
-            className="inline-block px-8 py-3 bg-ink text-white font-serif tracking-[2.5px] text-[11px] no-underline"
+            className="inline-block px-8 py-3 bg-gold text-bg font-serif tracking-[2.5px] text-[11px] no-underline"
           >
             POST A REVIEW
           </Link>

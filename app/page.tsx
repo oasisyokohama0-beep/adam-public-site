@@ -117,7 +117,7 @@ export default function TopPage() {
         </section>
 
         {/* ── 月間ランキング TOP5 ── */}
-        <section className="bg-ink mt-10 pt-12 pb-12" aria-label="月間ランキング">
+        <section className="bg-surface mt-10 pt-12 pb-12" aria-label="月間ランキング">
           {/* Section header */}
           <div className="text-center px-6 pb-10">
             <div className="font-jp text-[22px] text-white tracking-[6px]">月間ランキング</div>
@@ -213,7 +213,7 @@ export default function TopPage() {
                       {/* Tagline + 紹介文 */}
                       {copy && (
                         <div className="mt-4">
-                          <div className="font-jp text-[14px] text-cream leading-relaxed">
+                          <div className="font-jp text-[14px] text-ink leading-relaxed">
                             {copy.tagline}
                           </div>
                           <div className="font-jp text-[11px] text-ink-mute leading-loose mt-2">
@@ -240,7 +240,7 @@ export default function TopPage() {
 
         {/* ── 予約ブロック ── */}
         <div className="px-[22px] pb-[30px] pt-4">
-          <div className="bg-ink text-white px-6 py-7 text-center">
+          <div className="bg-surface text-white px-6 py-7 text-center">
             <div className="font-jp text-base leading-relaxed">ご予約・ご相談はこちら</div>
             <div className="w-[30px] h-px bg-gold mx-auto my-[18px]" />
             <div className="flex gap-2.5 justify-center">

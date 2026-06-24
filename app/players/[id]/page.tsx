@@ -313,7 +313,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ i
                           <div className="bg-cream px-2.5 py-1.5 font-jp text-ink-sub border-r border-b border-rule-gold">
                             投稿者
                           </div>
-                          <div className="bg-ink px-2.5 py-1.5 font-jp text-white text-center border-b border-rule-gold">
+                          <div className="bg-surface px-2.5 py-1.5 font-jp text-white text-center border-b border-rule-gold">
                             {r.authorName}
                           </div>
                           <div className="bg-cream px-2.5 py-1.5 font-jp text-ink-sub border-r border-rule-gold">
@@ -355,7 +355,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ i
             <div className="mt-5 flex justify-center">
               <Link
                 href="/reviews"
-                className="inline-flex items-center gap-2 bg-ink text-white font-jp text-[12px] tracking-[2px] px-7 py-3 rounded-full no-underline"
+                className="inline-flex items-center gap-2 bg-gold text-bg font-jp text-[12px] tracking-[2px] px-7 py-3 rounded-full no-underline"
               >
                 {t.name} の口コミ ({allMyReviews.length}件)
                 <span className="font-serif italic text-gold">→</span>
@@ -415,7 +415,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ i
           className="sticky bottom-0 px-[22px] pt-3.5 pb-[22px]"
           style={{ background: 'linear-gradient(180deg, transparent 0%, var(--color-bg) 30%)' }}
         >
-          <div className="bg-ink text-white px-6 py-[18px] flex items-center justify-between">
+          <div className="bg-surface text-white px-6 py-[18px] flex items-center justify-between">
             <div>
               <div className="font-serif text-[9px] tracking-[3px] text-gold italic">BOOK</div>
               <div className="font-jp text-[14px] mt-0.5">{t.name} を指名する</div>

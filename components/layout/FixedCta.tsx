@@ -18,7 +18,7 @@ export function FixedCta() {
       {/* LEGAL(handover): 電話番号 — store.json phone から取得。実値に差し替え後はプレースホルダーが消えること */}
       <a
         href={`tel:${store.phone}`}
-        className="flex-1 flex items-center justify-center gap-1.5 py-[14px] bg-ink text-white font-serif text-[13px] tracking-[3px] no-underline"
+        className="flex-1 flex items-center justify-center gap-1.5 py-[14px] bg-gold text-bg font-serif text-[13px] tracking-[3px] no-underline"
       >
         <span>📞</span>
         <span>電話する</span>

@@ -77,7 +77,7 @@ export default function AccessPage() {
 
         {/* CTA */}
         <div className="px-[22px] pb-8">
-          <div className="bg-ink text-white px-6 py-6 text-center">
+          <div className="bg-surface text-white px-6 py-6 text-center">
             <div className="font-serif text-[10px] tracking-[4px] text-gold italic">RESERVATIONS</div>
             <div className="font-jp text-sm mt-3 leading-relaxed">ご予約・お問い合わせはこちら</div>
             <div className="w-7 h-px bg-gold mx-auto my-4" />

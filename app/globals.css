@@ -12,18 +12,19 @@
   --font-sans:  "Noto Sans JP", -apple-system, system-ui, sans-serif;
   --font-mono:  ui-monospace, "SF Mono", monospace;
 
-  /* Reverence color palette */
-  --color-bg:         #F6F2EB;
-  --color-surface:    #FFFFFF;
-  --color-ink:        #2A2622;
-  --color-ink-sub:    #7A6F62;
-  --color-ink-mute:   #B6AB9C;
-  --color-gold:       #B8956A;
-  --color-gold-dk:    #8C6B43;
-  --color-cream:      #EDE5D6;
-  --color-line-green: #06C755;
-  --color-rule:       rgba(42,38,34,0.10);
-  --color-rule-gold:  rgba(184,149,106,0.45);
+  /* ADAM TOKYO color palette — 黒地×ゴールド（実サイト準拠）
+     bg=ページ地, surface=パネル/カード, ink=本文(明色), cream=暗パネル */
+  --color-bg:         #0B0B0B;
+  --color-surface:    #17130C;
+  --color-ink:        #F2E9D8;
+  --color-ink-sub:    #C9B68F;
+  --color-ink-mute:   #8C7B59;
+  --color-gold:       #CBA13B;
+  --color-gold-dk:    #8A6A22;
+  --color-cream:      #1E1810;
+  --color-line-green: #00B900;
+  --color-rule:       rgba(242,233,216,0.12);
+  --color-rule-gold:  rgba(203,161,59,0.45);
 
   /* shadcn semantic → Reverence */
   --color-background:          var(--color-bg);

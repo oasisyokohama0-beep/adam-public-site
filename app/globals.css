@@ -12,19 +12,22 @@
   --font-sans:  "Noto Sans JP", -apple-system, system-ui, sans-serif;
   --font-mono:  ui-monospace, "SF Mono", monospace;
 
-  /* ADAM TOKYO color palette — 黒地×ゴールド（実サイト準拠）
-     bg=ページ地, surface=パネル/カード, ink=本文(明色), cream=暗パネル */
+  /* ADAM TOKYO color palette — ロゴ準拠（黒地×アイボリー、差し色ワインレッド）
+     bg=ページ地, surface=パネル/カード, ink=本文(アイボリー), cream=暗パネル
+     gold=アイボリー系アクセント(罫線/小見出し), wine=リンゴの差し色(主要CTA/バッジ) */
   --color-bg:         #0B0B0B;
   --color-surface:    #17130C;
   --color-ink:        #F2E9D8;
-  --color-ink-sub:    #C9B68F;
-  --color-ink-mute:   #8C7B59;
-  --color-gold:       #CBA13B;
-  --color-gold-dk:    #8A6A22;
+  --color-ink-sub:    #C4B9A2;
+  --color-ink-mute:   #8B8169;
+  --color-gold:       #C7BCA3;
+  --color-gold-dk:    #8E846C;
+  --color-wine:       #8E2B30;
+  --color-wine-dk:    #6E2024;
   --color-cream:      #1E1810;
   --color-line-green: #00B900;
   --color-rule:       rgba(242,233,216,0.12);
-  --color-rule-gold:  rgba(203,161,59,0.45);
+  --color-rule-gold:  rgba(199,188,163,0.38);
 
   /* shadcn semantic → Reverence */
   --color-background:          var(--color-bg);

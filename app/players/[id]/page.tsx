@@ -201,7 +201,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ i
                   className="w-14 h-14 rounded-full flex items-center justify-center text-gold-dk transition-transform hover:-translate-y-0.5 overflow-hidden"
                   style={{
                     background: 'linear-gradient(155deg, #FDFBF6 0%, #F0EADD 100%)',
-                    border: '1.5px solid #C9A87E',
+                    border: '1.5px solid #C7BCA3',
                     boxShadow:
                       '0 6px 12px -4px rgba(140,107,67,0.20), 0 1px 2px rgba(140,107,67,0.15), inset 0 1px 0 rgba(255,255,255,0.6)',
                   }}
@@ -355,7 +355,7 @@ export default async function PlayerDetailPage({ params }: { params: Promise<{ i
             <div className="mt-5 flex justify-center">
               <Link
                 href="/reviews"
-                className="inline-flex items-center gap-2 bg-gold text-bg font-jp text-[12px] tracking-[2px] px-7 py-3 rounded-full no-underline"
+                className="inline-flex items-center gap-2 bg-wine text-ink font-jp text-[12px] tracking-[2px] px-7 py-3 rounded-full no-underline"
               >
                 {t.name} の口コミ ({allMyReviews.length}件)
                 <span className="font-serif italic text-gold">→</span>

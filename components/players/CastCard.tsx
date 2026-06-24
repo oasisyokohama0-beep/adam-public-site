@@ -44,7 +44,7 @@ export function CastCard({ therapist }: Props) {
             </div>
           )}
           {therapist.isNew && (
-            <div className="absolute top-2 right-2 font-serif text-[9px] tracking-[2.5px] text-gold italic">NEW</div>
+            <div className="absolute top-2 right-2 font-serif text-[9px] tracking-[2.5px] text-wine italic">NEW</div>
           )}
         </div>
       </div>

@@ -42,26 +42,21 @@ export default function TopPage() {
       <main>
         {/* ── 店舗バナー（正方形ヒーロー） ── */}
         <div className="mx-4 mt-[18px]">
-          {/* LEGAL(handover): ヒーロー背景画像 — /images/hero.jpg を配置（任意）。
-              画像が無い場合は単色ダーク背景のまま。 */}
+          {/* LEGAL(handover): ヒーローロゴ — /images/logo.jpg（ブランドロゴ：リンゴ＋手＋ADAM TOKYO）。
+              差し替える場合は同パスに正方形画像を配置。 */}
           <div
             className="relative aspect-square overflow-hidden border border-rule-gold"
-            style={{ background: '#2A2622' }}
+            style={{ background: '#1A1614' }}
           >
-            <div
-              className="absolute inset-0"
-              style={{ background: 'linear-gradient(180deg, rgba(42,38,34,0.55) 0%, rgba(42,38,34,0.15) 50%, rgba(42,38,34,0.65) 100%)' }}
+            <Image
+              src="/images/logo.jpg"
+              alt={`${store.name} ロゴ`}
+              fill
+              priority
+              sizes="(max-width: 430px) 100vw, 430px"
+              className="object-cover"
             />
-            <div className="absolute inset-2 border border-[rgba(231,207,166,0.5)] pointer-events-none" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-[18px]">
-              {/* LEGAL(handover): 店舗名 — store.json の nameRoman / name から取得 */}
-              <div className="font-serif text-[56px] tracking-[8px] text-white uppercase leading-none">
-                {store.nameRoman}
-              </div>
-              <div className="font-jp text-[13px] tracking-[6px] text-[#E7CFA6] mt-2">
-                {store.name}
-              </div>
-            </div>
+            <div className="absolute inset-2 border border-[rgba(199,188,163,0.5)] pointer-events-none" />
           </div>
         </div>
 
@@ -175,7 +170,7 @@ export default function TopPage() {
                       <div
                         className="font-serif flex items-baseline"
                         style={{
-                          color: entry.rank === 1 ? '#E7CFA6' : '#C9A87E',
+                          color: entry.rank === 1 ? '#EDE3CF' : '#A0967E',
                           lineHeight: 0.9,
                           fontStyle: 'italic',
                           fontWeight: 300,

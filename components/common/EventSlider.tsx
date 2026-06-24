@@ -62,7 +62,7 @@ export function EventSlider({ events }: Props) {
             className="h-[5px] rounded-full transition-all duration-[350ms] cursor-pointer"
             style={{
               width: i === current ? 20 : 5,
-              background: i === current ? '#E7CFA6' : 'rgba(231,207,166,0.4)',
+              background: i === current ? '#C7BCA3' : 'rgba(199,188,163,0.4)',
             }}
           />
         ))}

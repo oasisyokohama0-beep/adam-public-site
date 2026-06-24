@@ -54,7 +54,7 @@ export function AgeGate() {
         <div className="flex gap-2.5 mt-7">
           <button
             onClick={confirm}
-            className="flex-1 py-[14px] bg-gold text-bg font-serif text-xs tracking-[2px] cursor-pointer"
+            className="flex-1 py-[14px] bg-wine text-ink font-serif text-xs tracking-[2px] cursor-pointer"
           >
             18歳以上です
           </button>

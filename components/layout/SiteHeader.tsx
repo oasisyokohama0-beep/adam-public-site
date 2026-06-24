@@ -36,7 +36,6 @@ export function SiteHeader() {
         <Link href="/" className="text-center no-underline">
           {/* LEGAL(handover): 店舗名 — store.json nameRoman から取得 */}
           <div className="font-serif text-base tracking-[4px] text-ink uppercase">{store.nameRoman}</div>
-          <div className="font-serif text-[8px] tracking-[2.5px] text-gold italic mt-px">est. 2024 ・ tokyo</div>
         </Link>
 
         {/* Hamburger — 右 */}

@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { FixedCta } from "@/components/layout/FixedCta";
 import { AgeGate } from "@/components/modals/AgeGate";
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
 
 // NOTE(handover): Noto Serif/Sans JP は next/font/google だと Turbopack 本番ビルドで解決エラー
 // Google Fonts CDN から直接読み込む
@@ -35,7 +26,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ja" className={`${cormorant.variable} h-full antialiased`}>
+    <html lang="ja" className="h-full antialiased">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

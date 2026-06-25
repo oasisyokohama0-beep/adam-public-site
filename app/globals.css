@@ -7,7 +7,7 @@
 /* ── Reverence design tokens ── */
 @theme inline {
   /* Fonts */
-  --font-serif: var(--font-cormorant), "Noto Serif JP", serif;
+  --font-serif: "Noto Serif JP", serif;
   --font-jp:    "Noto Serif JP", serif;
   --font-sans:  "Noto Sans JP", -apple-system, system-ui, sans-serif;
   --font-mono:  ui-monospace, "SF Mono", monospace;
@@ -72,6 +72,10 @@
 }
 
 @layer utilities {
+  .font-serif {
+    font-family: "Noto Serif JP", serif;
+  }
+
   .italic {
     font-style: normal;
   }

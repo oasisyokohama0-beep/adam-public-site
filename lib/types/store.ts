@@ -2,7 +2,6 @@ export type Course = {
   id: string;
   name: string;
   durationMin: number;
-  durationLabel?: string;
   price: number;
   description?: string;
   isFirstOnly?: boolean;

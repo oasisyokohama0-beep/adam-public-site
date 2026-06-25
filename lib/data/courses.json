@@ -3,7 +3,6 @@
     "id": "meeting-60",
     "name": "顔合わせコース",
     "durationMin": 60,
-    "durationLabel": "60分",
     "price": 10000,
     "description": "新宿エリア限定 / ホテル不可"
   },
@@ -11,28 +10,24 @@
     "id": "standard-90",
     "name": "90分",
     "durationMin": 90,
-    "durationLabel": "90分",
     "price": 15000
   },
   {
     "id": "standard-120",
     "name": "120分",
     "durationMin": 120,
-    "durationLabel": "120分",
     "price": 20000
   },
   {
     "id": "standard-150",
     "name": "150分",
     "durationMin": 150,
-    "durationLabel": "150分",
     "price": 25000
   },
   {
     "id": "nap",
     "name": "お昼寝コース",
     "durationMin": 240,
-    "durationLabel": "施術120分 + お昼寝120分",
     "price": 35000,
     "description": "10〜18時限定 / 交通費・指名料込み"
   },
@@ -40,7 +35,6 @@
     "id": "morning",
     "name": "朝までコース",
     "durationMin": 420,
-    "durationLabel": "22:00〜翌05:00",
     "price": 50000,
     "description": "交通費・指名料込み"
   },
@@ -48,7 +42,6 @@
     "id": "overnight",
     "name": "まったりお泊まりコース",
     "durationMin": 720,
-    "durationLabel": "22:00〜翌10:00",
     "price": 70000,
     "description": "交通費・指名料込み"
   },
@@ -56,7 +49,6 @@
     "id": "full-day",
     "name": "24時間貸切コース",
     "durationMin": 1440,
-    "durationLabel": "24時間",
     "price": 200000,
     "description": "交通費・指名料込み"
   }

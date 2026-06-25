@@ -19,6 +19,62 @@ const otherSections = [
   { label: '注意事項', sub: 'NOTES' },
 ]
 
+function courseDurationLabel(course: Course) {
+  switch (course.id) {
+    case 'nap':
+      return '施術120分 + お昼寝120分'
+    case 'morning':
+      return '22:00〜翌05:00'
+    case 'overnight':
+      return '22:00〜翌10:00'
+    default:
+      return `${course.durationMin}分`
+  }
+}
+
+function CourseRow({ course, index, total }: { course: Course; index: number; total: number }) {
+  const durationLabel = courseDurationLabel(course)
+  const showDuration = durationLabel !== course.name
+
+  return (
+    <div
+      className="py-5"
+      style={{
+        borderTop: `1px solid ${index === 0 ? 'var(--color-rule-gold)' : 'var(--color-rule)'}`,
+        borderBottom: index === total - 1 ? '1px solid var(--color-rule-gold)' : 'none',
+      }}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0 text-left">
+          <div className="font-jp text-[15px] leading-relaxed tracking-[1px] text-ink">{course.name}</div>
+          {showDuration && (
+            <div className="mt-1 font-serif text-[11px] tracking-[2px] text-gold italic">
+              {durationLabel}
+            </div>
+          )}
+          {course.description && (
+            <div className="mt-2 font-jp text-[11px] leading-relaxed text-ink-sub">
+              {course.description}
+            </div>
+          )}
+        </div>
+        <div className="shrink-0 pt-0.5 text-right">
+          <div className="font-serif text-[24px] leading-none text-ink">
+            ¥{course.price.toLocaleString()}
+          </div>
+          <div className="mt-1 font-serif text-[9px] uppercase tracking-[2px] text-ink-mute">tax in</div>
+        </div>
+      </div>
+      {course.isFirstOnly && (
+        <div className="mt-3.5 mx-auto max-w-[240px] p-2.5 bg-cream border border-rule-gold">
+          <div className="font-serif text-[9px] tracking-[3px] text-gold-dk italic">FOR YOUR FIRST VISIT</div>
+          <div className="font-jp text-[11px] mt-1">初回ご来店の方限定割引</div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function SystemPage() {
   return (
     <PageWrapper>
@@ -41,43 +97,8 @@ export default function SystemPage() {
             <div className="font-jp text-[15px] tracking-[2px] text-ink">コース / 料金</div>
             <div className="mt-1 font-serif text-[10px] uppercase tracking-[4px] text-gold">Price</div>
           </div>
-          {courses.map((c, i) => (
-            <div
-              key={c.id}
-              className="py-5"
-              style={{
-                borderTop: `1px solid ${i === 0 ? 'var(--color-rule-gold)' : 'var(--color-rule)'}`,
-                borderBottom: i === courses.length - 1 ? '1px solid var(--color-rule-gold)' : 'none',
-              }}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="min-w-0 text-left">
-                  <div className="font-jp text-[15px] leading-relaxed tracking-[1px] text-ink">{c.name}</div>
-                  {c.durationLabel !== c.name && (
-                    <div className="mt-1 font-serif text-[11px] tracking-[2px] text-gold italic">
-                      {c.durationLabel ?? `${c.durationMin}分`}
-                    </div>
-                  )}
-                  {c.description && (
-                    <div className="mt-2 font-jp text-[11px] leading-relaxed text-ink-sub">
-                      {c.description}
-                    </div>
-                  )}
-                </div>
-                <div className="shrink-0 pt-0.5 text-right">
-                  <div className="font-serif text-[24px] leading-none text-ink">
-                    ¥{c.price.toLocaleString()}
-                  </div>
-                  <div className="mt-1 font-serif text-[9px] uppercase tracking-[2px] text-ink-mute">tax in</div>
-                </div>
-              </div>
-              {c.isFirstOnly && (
-                <div className="mt-3.5 mx-auto max-w-[240px] p-2.5 bg-cream border border-rule-gold">
-                  <div className="font-serif text-[9px] tracking-[3px] text-gold-dk italic">FOR YOUR FIRST VISIT</div>
-                  <div className="font-jp text-[11px] mt-1">初回ご来店の方限定割引</div>
-                </div>
-              )}
-            </div>
+          {courses.map((course, index) => (
+            <CourseRow key={course.id} course={course} index={index} total={courses.length} />
           ))}
         </section>
 

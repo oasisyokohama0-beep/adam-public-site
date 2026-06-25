@@ -50,9 +50,13 @@
 
 ### 使用データ
 - `lib/data/courses.json` → 全件
+- 現在は ADAM 東京の実料金 8 コースを JSON に格納済み（本番表示優先）。
+- `Course` 型は変更しない。表示用の特殊ラベル（例: `施術120分 + お昼寝120分`, `22:00〜翌05:00`）は `app/system/page.tsx` 側で `durationMin` / `id` から生成。
 
 ### イグチが置換する際の注意
 - `courses WHERE is_active=true ORDER BY duration_min`
+- `TODO(handover):` マーカーは維持。Supabase 置換時に `lib/data/courses.json` import をクエリへ置換する。
+- 特殊コースの表示ラベルを DB 側で持つか、フロント側で生成するかは井口さん確認。
 
 ---
 

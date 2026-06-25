@@ -200,8 +200,8 @@ export default function TopPage() {
                         style={{
                           color: entry.rank === 1 ? '#EDE3CF' : '#A0967E',
                           lineHeight: 0.9,
-                          fontStyle: 'italic',
-                          fontWeight: 300,
+                          fontStyle: 'normal',
+                          fontWeight: 400,
                         }}
                       >
                         <span
@@ -216,7 +216,7 @@ export default function TopPage() {
                         <span
                           style={{
                             fontSize: 56,
-                            letterSpacing: '-0.03em',
+                            letterSpacing: 0,
                           }}
                         >
                           {entry.rank}

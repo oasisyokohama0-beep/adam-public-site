@@ -18,10 +18,10 @@
   --color-bg:         #0B0B0B;
   --color-surface:    #17130C;
   --color-ink:        #F2E9D8;
-  --color-ink-sub:    #C4B9A2;
-  --color-ink-mute:   #8B8169;
-  --color-gold:       #C7BCA3;
-  --color-gold-dk:    #8E846C;
+  --color-ink-sub:    #D8D0BE;
+  --color-ink-mute:   #B8AD98;
+  --color-gold:       #D6C8A8;
+  --color-gold-dk:    #BFAF8D;
   --color-wine:       #8E2B30;
   --color-wine-dk:    #6E2024;
   --color-cream:      #1E1810;
@@ -68,5 +68,11 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .italic {
+    font-style: normal;
   }
 }

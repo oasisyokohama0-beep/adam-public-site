@@ -24,3 +24,9 @@
 ## 井口さんへの確認事項
 - Supabase `courses` 側で特殊コースの表示ラベルを持つか、フロント側で `durationMin` / `id` から生成するか。
 - 本番表示用に入れた実料金データを統合時に `courses` テーブルへどう移すか。
+
+## お客様の声ページ拡充
+- `/reviews` の UI を拡充し、評価サマリー、注目口コミ、投稿 CTA、口コミカード、空状態を追加。
+- `lib/data/reviews.json` にデザイン確認用の掲載サンプルを追加。
+- `lib/types/review.ts` は変更なし。Supabase 統合時は既存 `Review` 型に沿って `reviews` クエリへ置換。
+- `TODO(handover): ダミーデータを Supabase クエリに置換 / テーブル: reviews` は保持。

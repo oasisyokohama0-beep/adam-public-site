@@ -1,1 +1,55 @@
-[]
+[
+  {
+    "id": "review-sample-001",
+    "therapistId": "rin",
+    "therapistName": "りん",
+    "authorName": "掲載サンプル / 30代",
+    "rating": 5,
+    "content": "初めての利用で緊張していましたが、予約前のやり取りから当日までとても丁寧で安心できました。こちらのペースを大切にしてくれて、落ち着いた時間を過ごせたのが印象に残っています。",
+    "postedAt": "2026-06-22"
+  },
+  {
+    "id": "review-sample-002",
+    "therapistId": "rei",
+    "therapistName": "Rei",
+    "authorName": "掲載サンプル / 40代",
+    "rating": 5,
+    "content": "話し方がやわらかく、最初の数分で肩の力が抜けました。細かい気遣いが自然で、施術だけでなく空間全体に癒やされるような時間でした。またお願いしたいと思える接客でした。",
+    "postedAt": "2026-06-18"
+  },
+  {
+    "id": "review-sample-003",
+    "therapistId": "shohei",
+    "therapistName": "しょうへい",
+    "authorName": "掲載サンプル / 20代",
+    "rating": 5,
+    "content": "人見知りなので不安もありましたが、距離感がとても上手で無理に会話を広げすぎないところが心地よかったです。終わった後も気持ちが軽く、来てよかったと思いました。",
+    "postedAt": "2026-06-13"
+  },
+  {
+    "id": "review-sample-004",
+    "therapistId": "yuten",
+    "therapistName": "ゆうてん",
+    "authorName": "掲載サンプル / 30代",
+    "rating": 5,
+    "content": "丁寧なのに堅すぎず、自然体でいられる雰囲気を作ってくれました。気になることを相談しやすく、最初から最後まで安心して過ごせました。",
+    "postedAt": "2026-06-08"
+  },
+  {
+    "id": "review-sample-005",
+    "therapistName": "ADAM TOKYO",
+    "authorName": "掲載サンプル / 40代",
+    "rating": 5,
+    "content": "問い合わせの返信がわかりやすく、初回でも流れをイメージしやすかったです。サイトの雰囲気通り落ち着いた対応で、また時間を作って利用したいと思いました。",
+    "postedAt": "2026-06-02"
+  },
+  {
+    "id": "review-sample-006",
+    "therapistId": "rin",
+    "therapistName": "りん",
+    "authorName": "掲載サンプル / 20代",
+    "rating": 5,
+    "content": "こちらの希望を丁寧に聞いてくれて、初めから安心感がありました。短いコースでしたが満足感が高く、次はもう少し長い時間でお願いしたいです。",
+    "postedAt": "2026-05-29"
+  }
+]

@@ -131,6 +131,7 @@
 
 ### 使用データ
 - `lib/data/reviews.json` → 全件、postedAt 降順
+- 2026-06-26 時点ではデザイン確認用の掲載サンプルを格納。`Review` 型の追加変更はなし。
 
 ### イグチが置換する際の注意
 - `reviews WHERE is_approved=true ORDER BY posted_at DESC`

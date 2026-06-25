@@ -15,12 +15,6 @@ const reviews = (reviewsData as Review[]).sort(
   (a, b) => new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime()
 )
 
-const VOICE_POINTS = [
-  '初めてでも相談しやすい空気',
-  '予約前後のやり取りが丁寧',
-  '落ち着いた時間を過ごせる接客',
-]
-
 function Stars({ n }: { n: number }) {
   return (
     <div className="flex gap-0.5" aria-label={`${n} out of 5`}>
@@ -86,11 +80,8 @@ function ReviewCard({ review, featured = false }: { review: Review; featured?: b
 }
 
 export default function ReviewsPage() {
-  const reviewCount = reviews.length
-  const avg = reviewCount ? reviews.reduce((s, r) => s + r.rating, 0) / reviewCount : 0
   const featured = reviews[0]
   const otherReviews = reviews.slice(1)
-  const therapistCount = new Set(reviews.map(r => r.therapistId).filter(Boolean)).size
 
   return (
     <PageWrapper>
@@ -99,45 +90,6 @@ export default function ReviewsPage() {
           <span className="font-serif text-[11px] uppercase tracking-[4px] text-gold">Voice</span>
           <h1 className="font-jp text-[22px] mt-3 tracking-[4px] text-ink">お客様の声</h1>
           <div className="mt-4"><BDivider /></div>
-          <p className="mx-auto mt-5 max-w-[330px] font-jp text-[12.5px] leading-loose text-ink-sub">
-            ご来店前の不安が少しでもやわらぐように、雰囲気・接客・過ごし方が伝わる口コミをまとめています。
-          </p>
-        </section>
-
-        <section className="mx-[22px] border border-rule-gold bg-[linear-gradient(180deg,rgba(199,188,163,0.08),rgba(142,43,48,0.14))] px-5 py-6 text-center">
-          <div className="flex items-center justify-center gap-4">
-            <div className="font-serif text-[34px] text-gold">{avg.toFixed(1)}</div>
-            <div className="text-left">
-              <Stars n={Math.round(avg)} />
-              <div className="font-serif text-[10px] tracking-[1.5px] text-ink-sub mt-1">
-                {reviewCount} reviews
-              </div>
-            </div>
-          </div>
-          <div className="mt-5 grid grid-cols-3 border-y border-rule-gold/60 py-4">
-            <div>
-              <div className="font-serif text-[20px] text-gold">{reviewCount}</div>
-              <div className="mt-1 font-jp text-[10px] text-ink-sub">掲載数</div>
-            </div>
-            <div className="border-x border-rule-gold/50">
-              <div className="font-serif text-[20px] text-gold">{therapistCount}</div>
-              <div className="mt-1 font-jp text-[10px] text-ink-sub">担当者</div>
-            </div>
-            <div>
-              <div className="font-serif text-[20px] text-gold">5.0</div>
-              <div className="mt-1 font-jp text-[10px] text-ink-sub">最高評価</div>
-            </div>
-          </div>
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
-            {VOICE_POINTS.map(point => (
-              <span
-                key={point}
-                className="border border-rule-gold/60 bg-bg/40 px-3 py-1.5 font-jp text-[10.5px] text-ink-sub"
-              >
-                {point}
-              </span>
-            ))}
-          </div>
         </section>
 
         <section className="px-[22px] pt-6 pb-8 text-center">

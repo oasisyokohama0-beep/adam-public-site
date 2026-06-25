@@ -12,6 +12,12 @@ export const metadata: Metadata = {
 // TODO(handover): ダミーデータを Supabase クエリに置換
 // 元データ: lib/data/courses.json / テーブル: courses
 const courses = coursesData as Course[]
+const otherSections = [
+  { label: '指名料', sub: 'PRICE' },
+  { label: '出張エリア / 交通費', sub: 'AREA / TRANSPORTATION EXPENSES' },
+  { label: '延長', sub: 'PRICE' },
+  { label: '注意事項', sub: 'NOTES' },
+]
 
 export default function SystemPage() {
   return (
@@ -30,24 +36,41 @@ export default function SystemPage() {
         </div>
 
         {/* Courses */}
-        <div className="px-6">
+        <section className="px-5 pb-4">
+          <div className="mb-4 border border-rule-gold bg-[rgba(199,188,163,0.04)] px-5 py-4 text-center">
+            <div className="font-jp text-[15px] tracking-[2px] text-ink">コース / 料金</div>
+            <div className="mt-1 font-serif text-[10px] uppercase tracking-[4px] text-gold">Price</div>
+          </div>
           {courses.map((c, i) => (
             <div
               key={c.id}
-              className="py-6 text-center"
+              className="py-5"
               style={{
                 borderTop: `1px solid ${i === 0 ? 'var(--color-rule-gold)' : 'var(--color-rule)'}`,
                 borderBottom: i === courses.length - 1 ? '1px solid var(--color-rule-gold)' : 'none',
               }}
             >
-              <div className="font-serif text-[11px] tracking-[3px] text-gold italic">{c.name}</div>
-              <div className="flex items-baseline justify-center gap-3.5 mt-3.5">
-                <span className="font-serif text-[36px] italic text-ink">{c.durationMin}</span>
-                <span className="font-serif text-[10px] tracking-[2.5px] text-ink-sub italic">MIN</span>
-                <span className="w-px h-[30px] bg-rule-gold self-center" />
-                <span className="font-serif text-[24px] text-ink">¥{c.price.toLocaleString()}</span>
+              <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0 text-left">
+                  <div className="font-jp text-[15px] leading-relaxed tracking-[1px] text-ink">{c.name}</div>
+                  {c.durationLabel !== c.name && (
+                    <div className="mt-1 font-serif text-[11px] tracking-[2px] text-gold italic">
+                      {c.durationLabel ?? `${c.durationMin}分`}
+                    </div>
+                  )}
+                  {c.description && (
+                    <div className="mt-2 font-jp text-[11px] leading-relaxed text-ink-sub">
+                      {c.description}
+                    </div>
+                  )}
+                </div>
+                <div className="shrink-0 pt-0.5 text-right">
+                  <div className="font-serif text-[24px] leading-none text-ink">
+                    ¥{c.price.toLocaleString()}
+                  </div>
+                  <div className="mt-1 font-serif text-[9px] uppercase tracking-[2px] text-ink-mute">tax in</div>
+                </div>
               </div>
-              <div className="font-jp text-[11px] text-ink-sub mt-3">{c.description}</div>
               {c.isFirstOnly && (
                 <div className="mt-3.5 mx-auto max-w-[240px] p-2.5 bg-cream border border-rule-gold">
                   <div className="font-serif text-[9px] tracking-[3px] text-gold-dk italic">FOR YOUR FIRST VISIT</div>
@@ -56,34 +79,22 @@ export default function SystemPage() {
               )}
             </div>
           ))}
-        </div>
+        </section>
 
-        {/* Options */}
-        <div className="px-[30px] pt-10">
-          <div className="text-center">
-            <span className="font-serif text-[11px] tracking-[4px] uppercase text-gold italic">Options</span>
+        {/* Other headings from the source system page */}
+        <section className="px-5 pb-10 pt-6">
+          <div className="grid gap-3">
+            {otherSections.map(section => (
+              <div
+                key={section.label}
+                className="border border-rule bg-[rgba(199,188,163,0.03)] px-5 py-4 text-center"
+              >
+                <div className="font-jp text-[14px] tracking-[2px] text-ink">{section.label}</div>
+                <div className="mt-1 font-serif text-[9px] uppercase tracking-[3px] text-gold">{section.sub}</div>
+              </div>
+            ))}
           </div>
-          {/* LEGAL(handover): オプション料金表
-              担当：イグチ（実際のオプション・金額を差し込み） */}
-          <div className="mt-4 font-jp text-[12.5px] leading-[2] text-ink-sub bg-cream border border-rule-gold p-5 text-center">
-            <div className="font-serif text-[10px] tracking-[2px] text-gold italic mb-2">LEGAL(handover)</div>
-            ここにオプション料金を差し込みます
-          </div>
-        </div>
-
-        {/* System / Cancellation notes */}
-        <div className="px-[30px] pt-10 pb-8">
-          <div className="text-center">
-            <span className="font-serif text-[11px] tracking-[4px] uppercase text-gold italic">System</span>
-            <div className="font-jp text-base mt-2">ご利用について</div>
-          </div>
-          {/* LEGAL(handover): キャンセル規定・ご利用ルール
-              担当：イグチ（オーナー確認済みの規定を差し込み） */}
-          <div className="mt-5 font-jp text-[12.5px] leading-[2] text-ink-sub bg-cream border border-rule-gold p-5 text-center">
-            <div className="font-serif text-[10px] tracking-[2px] text-gold italic mb-2">LEGAL(handover)</div>
-            ここにご利用ルール・キャンセル規定を差し込みます
-          </div>
-        </div>
+        </section>
       </main>
     </PageWrapper>
   )
